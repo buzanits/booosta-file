@@ -13,13 +13,13 @@ class File extends \booosta\base\Module
   public function get($var) { return $this->$var; }
   public function set($var, $val) { $this->$var = $val; }
 
-  public function get_fileextension($filename)
+  public static function get_fileextension($filename)
   {
     $pathinfo = pathinfo($filename);
     return $pathinfo['extension'];
   }
 
-  public function get_rawname($filename)
+  public static function get_rawname($filename)
   {
     $pathinfo = pathinfo($filename);
     return $pathinfo['filename'];
